@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sneakers</title>
+  <link rel="icon" href="images/show.png">
+  <link rel="stylesheet" href="style..css">
+</head>
+
+<body>
+  <div class="nav">
+
+    <div class="snekers">
+      <img src="images/logo.svg" height="25px">
+    </div>
+
+    <div class="buttons">
+      <button class="btn"
+        onclick="handlelocate(`file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/sneakers/collections.html`)">Collections</button>
+      <button class="btn"
+        onclick="handlelocate(`file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/sneakers/mens.html`)">Men</button>
+      <button class="btn" onclick="handlelocate(``)">Women</button>
+      <button class="btn"
+        onclick="handlelocate(`file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/sneakers/about%20.html`)"> About</button>
+      <button class="btn" id="contact"
+        onclick="handlelocate(`file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/sneakers/contact.html`)">Contact</button>
+    </div>
+
+    <div class="logo">
+      <img src="images/icon-cart.svg" height="20px" width="20px" style="cursor:pointer" onclick="handlecart()">
+      <img src="images/image-avatar.png" height="50px" width="50px" style="cursor:pointer"
+        onclick="handlelocate(`file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/sneakers/profile.html`)">
+
+      <div class="container">
+
+        <div style="display: flex;align-items: center;justify-content: space-between;">
+          <h4 style="margin-left: 15px;margin-bottom: 2px;">Cart</h4>
+          <img src="images/icon-close.svg" style="margin-top: 17px;margin-right: 10px;cursor: pointer;"
+            onclick="handlecross()">
+
+        </div>
+
+        <hr style="background-color:grey">
+        <p style="margin-top: 30px;margin-left: 30px;" id="emptycart">Your Cart is empty</p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <hr style="color: rgb(231, 228, 228);">
+
+
+
+  <div class="overalldiv">
+
+    <div>
+
+
+      <div>
+        <img src="images/shoe4.webp" class="slipper"
+          style="box-shadow: 10px 10px 10px 0px rgb(207, 207, 207); border: 1px rgb(201, 200, 200) solid;">
+      </div>
+
+      <div style="margin-left: 15px;">
+        <img src="images/shoe4.webp" class="thumbnail" onclick="handleclick()" style="border: 3px orange solid;">
+        <img src="images/shoe3.webp" class="thumbnail" onclick="handleclick()">
+        <img src="images/sshoe.jpeg" class="thumbnail" style="border: 1px rgb(201, 200, 200) solid;">
+        <img src="images/sshoe1.jpeg" class="thumbnail" style="border: 1px rgb(201, 200, 200) solid;">
+      </div>
+
+    </div>
+
+
+    <div class="fonts">
+
+      <p
+        style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-weight: bold;color: rgb(100, 100, 100);">
+        SNEAKERS COMPANY</p>
+
+      <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;width: 400px;" id="head">Multicolor Casual
+        Sneakers </h1>
+
+      <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;width: 500px;color: rgb(104, 104, 104);">
+        INDIAN SHOZZ Casual Sneaker Shoes Take 4 Shoes for the Best price.different of 4 set of shoes </p>
+
+
+      <div style="display: flex;align-items: center;gap: 15px;">
+        <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;margin-bottom: 5px;"
+          id="price">
+          $900.00</h1>
+        <button
+          style="background-color: black;color: white;border: transparent;font-weight: bold;border-radius: 5px;padding: 5px;margin-top: 20px;">50%</button>
+      </div>
+
+      <p style="font-weight: bold; margin-top:0px;">MRP:$1500.00</p>
+
+      <div style="display: flex;gap: 15px ;position: relative;">
+        <button
+          style="width: 140px;background-color: hsl(25, 100%, 94%);color: black;border-radius: 10px;padding: 12px;border: transparent;font-weight: bold;margin-top: 10px;"
+          id="number">0</button>
+        <img src="images/icon-plus.svg" style="position: absolute;top: 24px;left:115px;cursor: pointer;"
+          onclick="handleincrese()">
+        <img src="images/icon-minus.svg" style="position: absolute;top:28px;left: 12px ;cursor: pointer;"
+          onclick="handledecrese()">
+        <button
+          style="background-color:  hsl(26, 100%, 55%);width: 140px;border-radius: 10px;border: transparent;padding: 12px;padding-left: 30px;  font-weight: bold;margin-top: 10px;"
+          onclick="handleappend()">Add to Cart</button>
+        <img src="images/icon-cart.svg" style="position: absolute;top:19px ;margin-left: 170px;">
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="overlay">
+
+
+  </div>
+
+  <div class="overall">
+
+    <div class="overall1">
+
+      <div style="margin-top: 100px;;  position: relative;">
+        <img src="images/shoe4.webp" class="slipper1">
+        <img src="close.png" class="close">
+        <img src="images/icon-previous.svg" class="previous">
+        <img src="images/icon-previous.svg" class="previous1">
+      </div>
+
+      <div style="margin-left: 15px;">
+        <img src="images/shoe4.webp" class="thumbnails" id="shoe1">
+        <img src="images/shoe3.webp" class="thumbnails" id="shoe2">
+        <img src="images/sshoe.jpeg" class="thumbnails" id="shoe3">
+        <img src="images/sshoe1.jpeg" class="thumbnails" id="shoe4">
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <img src="images/icon-next.svg"
+    style="position: absolute;top: 320px;left: 20px; background-color: rgb(181, 179, 179); height: 30px;width: 30px;padding: 20px; border-radius: 100%; rotate: 180deg;"
+    onclick="handlewindow()">
+
+
+
+
+
+  <script>
+    const slipper = document.querySelector('.slipper1');
+    const rightBtn = document.querySelector('.previous1');
+    const leftBtn = document.querySelector('.previous');
+    const thumbnails = document.querySelectorAll('.thumbnails');
+    const overlay = document.querySelector(".overlay")
+    const overall1 = document.querySelector(".overall1")
+    const close = document.querySelector(".close")
+    const number = document.getElementById("number")
+    const container = document.querySelector(".container")
+    const emptycart = document.getElementById("emptycart")
+    const price = document.getElementById("price")
+    const head = document.getElementById("head")
+
+    const images = [
+      'images/shoe4.webp',
+      'images/shoe3.webp',
+      'images/sshoe.jpeg',
+      'images/sshoe1.jpeg',
+    ];
+
+    let currentIndex = 0;
+
+    rightBtn.addEventListener('click', function () {
+      currentIndex = (currentIndex + 1) % images.length;
+      slipper.src = images[currentIndex];
+    });
+
+    leftBtn.addEventListener('click', function () {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      slipper.src = images[currentIndex];
+    });
+
+    thumbnails.forEach((thumb, index) => {
+      thumb.addEventListener('click', function () {
+        slipper.src = images[index];
+        currentIndex = index;
+      });
+    });
+
+    function handleclick() {
+      overlay.style.display = "block"
+      overall1.style.display = "block"
+    }
+
+    close.addEventListener("click", function () {
+      overlay.style.display = "none"
+      overall1.style.display = "none"
+    })
+
+    numbers = 0
+    total = 900
+
+    function handleincrese() {
+      number.textContent = ++numbers
+      var all = numbers * total;
+      price.textContent = `$  ${all}`
+    }
+
+
+    function handledecrese() {
+      if (numbers >= 0) {
+        numbers--
+        number.textContent = numbers
+        var all2 = numbers * total;
+        price.textContent = `$  ${all2}`
+      }
+    }
+
+    function handlecart() {
+      container.style.display = "block"
+    }
+
+    function handlecross() {
+      container.style.display = "none"
+    }
+
+    function handleappend() {
+
+      emptycart.style.display = "none"
+
+      var div = document.createElement("div")
+      div.classList.add("item")
+
+      var shoeimg = document.createElement("img")
+      shoeimg.src = "images/shoe4.webp"
+      shoeimg.classList.add("shoeimg")
+
+      var img = document.createElement("p")
+      img.textContent = head.textContent
+      img.style.marginBottom = "1px"
+
+
+      let p = document.createElement("p");
+      p.innerHTML = `${numbers} x $${total} = <strong>$${numbers * total}</strong>`
+      p.style.marginTop = "0px"
+
+      var dltbtn = document.createElement("img")
+      dltbtn.src = "images/icon-delete.svg"
+      dltbtn.style.cursor = "pointer";
+      dltbtn.style.marginLeft = "10px"
+
+      dltbtn.addEventListener("click", function () {
+        div.remove()
+      })
+
+      var div2 = document.createElement("div")
+
+      div2.append(img, p)
+
+      div.appendChild(shoeimg)
+      div.appendChild(div2)
+      div.appendChild(dltbtn)
+
+      container.appendChild(div)
+
+    }
+
+
+    function handlelocate(url) {
+      window.open(url, "_blank")
+    }
+
+    function handlewindow() {
+      window.location = "shoelist.html"
+    }
+  </script>
+</body>
+
+</html>

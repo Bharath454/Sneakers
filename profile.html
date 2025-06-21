@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile</title>
+  <link rel="stylesheet" href="profile.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #1f2937;
+  color: white;
+  width: 250px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-box {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.avatar-box .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #10b981;
+  margin-bottom: 15px;
+}
+
+.nav-links a {
+  display: block;
+  color: #cbd5e1;
+  text-decoration: none;
+  margin: 10px 0;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #10b981;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.main-content h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.orders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.order-card {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+}
+
+.order-card img {
+  width: 120px;
+  object-fit: cover;
+}
+
+.order-details {
+  padding: 15px;
+}
+
+.order-details h3 {
+  margin-bottom: 10px;
+}
+
+.order-details p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.delivered {
+  color: green;
+  font-weight: 600;
+}
+
+.shipped {
+  color: orange;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .avatar-box {
+    flex: 1;
+  }
+  .nav-links {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="avatar-box">
+        <img src="images/image-avatar.png"  class="avatar" />
+        <h2>Bharath S</h2>
+        <p>Bharath0303@gmail.com</p>
+      </div>
+      <nav class="nav-links">
+        <a href="#">My Orders</a>
+        <a href="#">Wishlist</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h1>Order History</h1>
+      <div class="orders">
+        <div class="order-card">
+          <img src="images/shoe3.webp" alt="Shoe" />
+          <div class="order-details">
+            <h3>Air Max Pulse</h3>
+            <p>Date: 10 June 2025</p>
+            <p>Status: <span class="delivered">Delivered</span></p>
+          </div>
+        </div>
+        <div class="order-card">
+          <img src="images/sshoe.jpeg" alt="Shoe" />
+          <div class="order-details">
+            <h3>Infinity RN 4</h3>
+            <p>Date: 15 May 2025</p>
+            <p>Status: <span class="shipped">Shipped</span></p>
+          </div>
+        </div>
+        
+      </div>
+      
+    </main>
+  </div>
+</body>
+</html>

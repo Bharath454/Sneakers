@@ -1,0 +1,183 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.snekers{
+  margin-left: 150px;
+}
+
+.btn{
+  color: rgb(105, 104, 104);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background: transparent;
+  border: transparent;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 10px;
+  
+}
+
+.btn:hover{
+    background-color: rgb(226, 224, 224);
+    color: black;
+}
+.appenddiv{
+    height: fit-content;
+    width: fit-content;
+    
+}
+
+.buttons{
+    display: flex;
+    gap: 24px;
+    margin-top: 5px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    gap: 30px;
+    position: relative;
+  
+    
+}
+
+.slipper{
+    height: 430px;
+    width: 430px;
+    border-radius: 15px;
+}
+
+.thumbnail{
+    height: 85px;
+    width: 85px;
+    border-radius: 10px;
+    margin-right: 15px;
+    margin-top: 5px;
+    cursor: pointer;
+    
+  
+}
+
+.fonts{
+    margin-top: 20px;
+}
+
+.overalldiv{
+    display: flex;
+    margin-left: 250px;
+    gap: 100px;
+    margin-top: 55px;
+    position: relative;
+}
+
+ .slipper1{
+    height: 430px;
+    width: 430px;
+    border-radius: 15px;
+}
+
+.thumbnails{
+    height: 85px;
+    width: 85px;
+    border-radius: 10px;
+    margin-right: 15px;
+    margin-top: 5px;
+    cursor: pointer;
+
+}
+
+.close{
+    height: 30px;
+    position: absolute;
+    bottom: 450px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.previous{
+    height: 20px;
+    width: 20px;
+    padding: 15px;
+    background-color: rgb(253, 253, 253);
+    border-radius: 100%;
+    position: absolute;
+    left: -20px;
+    top: 180px;
+    cursor: pointer;
+}
+
+
+.previous1{
+    height: 20px;
+    width: 20px;
+    padding: 15px;
+    background-color: rgb(255, 254, 254);
+    border-radius: 100%;
+    position: absolute;
+    left: 405px;
+    top: 180px;
+    rotate: 180deg;
+    cursor: pointer;
+}
+
+.overlay{
+            background-color: rgb(11, 0, 0);
+            opacity: 0.7;
+            height: 46em;
+            width: 96em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display:none;
+          }
+
+.overall1{
+   position: relative;
+            z-index: 1;
+            display: none;
+            
+            
+}
+
+
+
+.overall{
+    position: absolute;
+    top: 0;
+    left: 550px;
+}
+
+.container{
+    max-height: 350px;
+    width: 300px;
+    background-color: rgb(253, 252, 252);
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 0px grey;
+    display: none;
+    z-index: 2;
+    overflow-y: auto;
+}
+
+.shoeimg{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px;
+}

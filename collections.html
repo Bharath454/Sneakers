@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Collections - Sneakers</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 60px;
+      border-bottom: 1px solid #eee;
+      align-items: center;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #111;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .navbar img {
+      height: 25px;
+    }
+
+    h1.section-title {
+      font-size: 36px;
+      margin: 40px 60px 10px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 30px 60px;
+    }
+
+    .product-card {
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: white;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .product-card:hover {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      transform: scale(1.03);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .product-info {
+      padding: 15px;
+    }
+
+    .product-info h3 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+    }
+
+    .product-info p {
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <img src="images/logo.svg" alt="Logo" />
+    <div>
+      <a href="index.html">Home</a>
+    </div>
+  </div>
+
+  <h1 class="section-title">Shoe Collections</h1>
+  <div class="products-grid" id="collection-grid"></div>
+
+  <h1 class="section-title">New Arrivals</h1>
+  <div class="products-grid" id="new-arrivals-grid"></div>
+
+  <script>
+    const collections = [
+      { name: "Air Max 90", desc: "Retro meets comfort", img: "images/image-product-1.jpg" },
+      { name: "ASIAN Men's TARZAN-11", desc: "Running revolution", img: "images/list shoe.jpg" },
+      { name: "Blazer Mid", desc: "Streetwear classic", img: "images/sshoe1.jpeg" },
+      { name: "React Vision", desc: "Everyday comfort", img: "images/shoe4.webp" },
+      { name: "React Vision", desc: "Everyday comfort", img: "images/sshoe.jpeg" },
+    ];
+
+    const newArrivals = [
+      { name: "Air Max Pulse", desc: "Fresh drop", img: "images/sshoe1.jpeg" },
+      { name: "Infinity RN 4", desc: "For long distance", img: "images/shoe3.webp" },
+      { name: "Metcon 9", desc: "Training shoe", img: "images/sshoe.jpeg" }
+    ];
+
+    function renderShoes(data, containerId) {
+      const container = document.getElementById(containerId);
+      data.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "product-card";
+
+        const img = document.createElement("img");
+        img.src = item.img;
+        img.alt = item.name;
+
+        const info = document.createElement("div");
+        info.className = "product-info";
+
+        const name = document.createElement("h3");
+        name.textContent = item.name;
+
+        const desc = document.createElement("p");
+        desc.textContent = item.desc;
+
+        info.appendChild(name);
+        info.appendChild(desc);
+
+        card.appendChild(img);
+        card.appendChild(info);
+
+        container.appendChild(card);
+      });
+    }
+
+    renderShoes(collections, "collection-grid");
+    renderShoes(newArrivals, "new-arrivals-grid");
+  </script>
+
+</body>
+</html>

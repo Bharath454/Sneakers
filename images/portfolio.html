@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fcefee, #e4f0ff);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      color: #ec6d88;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ec6d88;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 100px 20px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+      color: #444;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin-top: 15px;
+      font-size: 1.1em;
+      color: #666;
+    }
+
+    .hero button {
+      margin-top: 30px;
+      padding: 12px 28px;
+      background-color: #ec6d88;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .hero button:hover {
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 60px 40px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: #ec6d88;
+    }
+
+    .skills {
+      background: #fff;
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .skills h2 {
+      color: #ec6d88;
+      margin-bottom: 30px;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .skill {
+      background-color: #fcefee;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-weight: 500;
+      color: #ec6d88;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .skill:hover {
+      transform: scale(1.05);
+    }
+
+    .contact {
+      background-color: #fff;
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #ec6d88;
+    }
+
+    .contact p {
+      margin-top: 10px;
+      color: #555;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      background: #ec6d88;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sneha</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="about">
+    <h2>Hi, I'm Sneha 👩‍💻</h2>
+    <p>A passionate computer science student exploring web development, UI/UX design, and cloud technologies. Always excited to build beautiful and useful things!</p>
+    <button onclick="window.location.href='#projects'">View My Projects</button>
+  </section>
+
+  <section class="section" id="projects">
+    <h2 style="text-align:center; color:#ec6d88">My Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A personal site to showcase my journey and projects. Built with HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project-card">
+        <h3>Weather App</h3>
+        <p>Displays real-time weather using an open API. Clean UI and responsive design.</p>
+      </div>
+      <div class="project-card">
+        <h3>Todo List</h3>
+        <p>Simple and efficient to-do app with animations. Built with vanilla JS.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-list">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Cybersecurity</div>
+      <div class="skill">Python</div>
+      <div class="skill">UI/UX Design</div>
+      
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Get In Touch</h2>
+    <p>Email: sneha@example.com</p>
+    <p>LinkedIn: linkedin.com/in/sneha</p>
+    <p>Instagram: @sneha.codes</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Sneha. Made with ❤️</p>
+  </footer>
+</body>
+</html>
